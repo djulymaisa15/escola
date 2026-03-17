@@ -1,50 +1,112 @@
-/* Configurações de Cores */
+/* Paleta de Cores e Fontes */
 :root {
-    --azul: #1a4a7c;
-    --dourado: #f1c40f;
+    --primary: #1a4a7c;    /* Azul Marinho */
+    --secondary: #f39c12;  /* Dourado */
+    --light: #f8f9fa;      /* Cinza muito claro */
+    --white: #ffffff;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
-    color: #333;
+    color: #2d3436;
+    scroll-behavior: smooth;
 }
 
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Cabeçalho */
 header {
-    background-color: var(--azul);
-    color: white;
+    background: linear-gradient(135deg, var(--primary), #2980b9);
+    color: var(--white);
+    padding: 50px 20px;
     text-align: center;
-    padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
+.animal-decor {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+
+/* Navegação */
 nav {
-    background: #333;
-    padding: 10px;
+    background: #2d3436;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0;
+    margin: 0;
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    padding: 0 15px;
+    font-weight: 600;
+    padding: 0 20px;
+    transition: color 0.3s;
 }
 
+nav a:hover {
+    color: var(--secondary);
+}
+
+/* Seções */
+section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.bg-light { background-color: var(--light); }
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+/* Grid de Cursos */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .card {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    border-bottom: 4px solid var(--dourado);
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border-top: 5px solid var(--secondary);
 }
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon { font-size: 3rem; margin-bottom: 15px; }
+
+/* Calculadora */
+.calc-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #ddd
