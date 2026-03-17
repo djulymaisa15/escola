@@ -1,1 +1,23 @@
+function calcular() {
+    // Busca os valores dos inputs
+    const nota1 = parseFloat(document.getElementById('n1').value);
+    const nota2 = parseFloat(document.getElementById('n2').value);
+    const resultado = document.getElementById('res');
 
+    // Validação simples
+    if (isNaN(nota1) || isNaN(nota2)) {
+        resultado.innerText = "Digite as duas notas para calcular.";
+        return;
+    }
+
+    // Lógica do cálculo
+    const media = (nota1 + nota2) / 2;
+
+    if (media >= 7) {
+        resultado.innerText = `Média: ${media.toFixed(1)} - Aluno Aprovado!`;
+        resultado.style.color = "green";
+    } else {
+        resultado.innerText = `Média: ${media.toFixed(1)} - Recuperação.`;
+        resultado.style.color = "red";
+    }
+}
