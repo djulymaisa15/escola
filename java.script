@@ -1,23 +1,21 @@
 function calcular() {
-    // Busca os valores dos inputs
-    const nota1 = parseFloat(document.getElementById('n1').value);
-    const nota2 = parseFloat(document.getElementById('n2').value);
-    const resultado = document.getElementById('res');
+    const n1 = parseFloat(document.getElementById('n1').value);
+    const n2 = parseFloat(document.getElementById('n2').value);
+    const box = document.getElementById('resultado-final');
 
-    // Validação simples
-    if (isNaN(nota1) || isNaN(nota2)) {
-        resultado.innerText = "Digite as duas notas para calcular.";
+    if (isNaN(n1) || isNaN(n2)) {
+        box.innerHTML = "Ops! 🙊 Coloque as duas notas.";
+        box.style.color = "orange";
         return;
     }
 
-    // Lógica do cálculo
-    const media = (nota1 + nota2) / 2;
+    const media = (n1 + n2) / 2;
 
     if (media >= 7) {
-        resultado.innerText = `Média: ${media.toFixed(1)} - Aluno Aprovado!`;
-        resultado.style.color = "green";
+        box.innerHTML = `<h3>Média: ${media.toFixed(1)}</h3> <p>Parabéns! Você é uma fera! 🦁🔥</p>`;
+        box.style.color = "green";
     } else {
-        resultado.innerText = `Média: ${media.toFixed(1)} - Recuperação.`;
-        resultado.style.color = "red";
+        box.innerHTML = `<h3>Média: ${media.toFixed(1)}</h3> <p>Não desanime, continue estudando como uma formiguinha! 🐜📖</p>`;
+        box.style.color = "red";
     }
 }
