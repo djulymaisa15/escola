@@ -1,21 +1,4 @@
-function calcular() {
-    const n1 = parseFloat(document.getElementById('n1').value);
-    const n2 = parseFloat(document.getElementById('n2').value);
-    const box = document.getElementById('resultado-final');
+// script.js
 
-    if (isNaN(n1) || isNaN(n2)) {
-        box.innerHTML = "Ops! 🙊 Coloque as duas notas.";
-        box.style.color = "orange";
-        return;
-    }
-
-    const media = (n1 + n2) / 2;
-
-    if (media >= 7) {
-        box.innerHTML = `<h3>Média: ${media.toFixed(1)}</h3> <p>Parabéns! Você é uma fera! 🦁🔥</p>`;
-        box.style.color = "green";
-    } else {
-        box.innerHTML = `<h3>Média: ${media.toFixed(1)}</h3> <p>Não desanime, continue estudando como uma formiguinha! 🐜📖</p>`;
-        box.style.color = "red";
-    }
-}
+// Exemplo de interação simples - Confirmar que a página foi carregada com sucesso
+console.log("Página carregada com sucesso!");
