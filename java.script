@@ -7,14 +7,4 @@ function mostrarInfo(curso) {
 // Função para abrir a imagem em tamanho maior
 function abrirImagem(img) {
     const modal = document.createElement('div');
-    modal.classList.add('modal');
-    modal.innerHTML = `<img src="${img.src}" alt="${img.alt}" class="modal-content">
-                       <span class="close" onclick="fecharModal()">&times;</span>`;
-    document.body.appendChild(modal);
-}
-
-// Função para fechar o modal de imagem
-function fecharModal() {
-    const modal = document.querySelector('.modal');
-    modal.remove();
-}
+   
