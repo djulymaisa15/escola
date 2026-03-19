@@ -1,28 +1,20 @@
-// script.js
-
-// Função para mostrar as informações adicionais do curso
+// Função para mostrar as informações dos cursos
 function mostrarInfo(curso) {
     const infoBox = document.getElementById(curso + '-info');
-    if (infoBox.style.display === 'block') {
-        infoBox.style.display = 'none';
-    } else {
-        infoBox.style.display = 'block';
-        infoBox.innerHTML = getCursoInfo(curso);
-    }
+    infoBox.style.display = infoBox.style.display === 'block' ? 'none' : 'block';
 }
 
-// Função para retornar o conteúdo das informações dos cursos
-function getCursoInfo(curso) {
-    switch(curso) {
-        case 'robotica':
-            return '<p><strong>O que é?</strong> Robótica é uma área multidisciplinar que envolve a criação, construção e programação de máquinas automatizadas, chamadas de robôs. O curso busca desenvolver habilidades dos alunos na criação de robôs para realizar tarefas específicas.</p>';
-        case 'edutech':
-            return '<p><strong>O que é?</strong> Edutech, ou Educação Tecnológica, utiliza ferramentas tecnológicas para melhorar o processo de ensino-aprendizagem. O curso prepara os alunos para o futuro digital, explorando plataformas e ferramentas tecnológicas no ensino.</p>';
-        case 'pma':
-            return '<p><strong>O que é?</strong> PMA significa Planejamento e Metas Acadêmicas. Ensina os alunos a estabelecer e alcançar metas de aprendizado eficazmente, promovendo a autonomia e a organização no estudo.</p>';
-        case 'gremio':
-            return '<p><strong>O que é?</strong> O curso de Grêmio desenvolve habilidades de liderança, organização de eventos e participação ativa na gestão escolar. Os alunos têm voz ativa e podem sugerir melhorias para a escola.</p>';
-        default:
-            return '';
-    }
+// Função para abrir a imagem em tamanho maior
+function abrirImagem(img) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `<img src="${img.src}" alt="${img.alt}" class="modal-content">
+                       <span class="close" onclick="fecharModal()">&times;</span>`;
+    document.body.appendChild(modal);
+}
+
+// Função para fechar o modal de imagem
+function fecharModal() {
+    const modal = document.querySelector('.modal');
+    modal.remove();
 }
