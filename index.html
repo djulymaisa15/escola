@@ -17,10 +17,11 @@
 
 <main>
     <section id="sobre">
-        <h2>Bem-Vindos à nossa Escola </h2>
+        <h2>Bem-Vindos à nossa Escola</h2>
         <p>Oferecemos um ambiente acolhedor e inovador, focado no desenvolvimento integral dos alunos.</p>
         
         <div class="img-container">
+            <!-- Aqui você pode adicionar uma imagem da escola -->
         </div>
 
         <div class="diferenciais">
@@ -39,50 +40,57 @@
         <div class="grid">
             <!-- Robótica -->
             <div class="card robotica">
-                <span class="animal">🤖 </span>
+                <span class="icon">🤖</span>
                 <h3>Robótica</h3>
                 <p>Construindo o futuro com inteligência.</p>
                 <button onclick="mostrarInfo('robotica')">Mais Informações</button>
-                <div id="robotica-info" class="info-box"></div>
+                <div id="robotica-info" class="info-box">
+                    <p>Robótica é uma área que integra ciência e tecnologia, criando oportunidades para os alunos desenvolverem suas habilidades em programação e mecânica.</p>
+                </div>
             </div>
 
             <!-- Edutech -->
             <div class="card edutech">
-                <span class="animal">💻 </span>
+                <span class="icon">💻</span>
                 <h3>Edutech</h3>
                 <p>Tecnologia a favor do saber.</p>
                 <button onclick="mostrarInfo('edutech')">Mais Informações</button>
-                <div id="edutech-info" class="info-box"></div>
+                <div id="edutech-info" class="info-box">
+                    <p>O curso de Edutech oferece uma abordagem inovadora, utilizando ferramentas tecnológicas para otimizar o aprendizado e promover o ensino digital.</p>
+                </div>
             </div>
 
             <!-- PMA -->
             <div class="card pma">
-                <span class="animal">📊 </span>
+                <span class="icon">📊</span>
                 <h3>PMA</h3>
                 <p>Metas e excelência acadêmica.</p>
                 <button onclick="mostrarInfo('pma')">Mais Informações</button>
-                <div id="pma-info" class="info-box"></div>
+                <div id="pma-info" class="info-box">
+                    <p>O PMA visa desenvolver metas de excelência acadêmica, proporcionando aos alunos um caminho para o sucesso pessoal e profissional.</p>
+                </div>
             </div>
 
             <!-- Grêmio -->
             <div class="card gremio">
-                <span class="animal">🎓 </span>
+                <span class="icon">🎓</span>
                 <h3>Grêmio</h3>
                 <p>Liderança e voz estudantil.</p>
                 <button onclick="mostrarInfo('gremio')">Mais Informações</button>
-                <div id="gremio-info" class="info-box"></div>
+                <div id="gremio-info" class="info-box">
+                    <p>O Grêmio Estudantil oferece aos alunos a oportunidade de desenvolver habilidades de liderança, organização e trabalho em equipe.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Galeria de Imagens -->
     <section id="galeria">
         <h2>Galeria de Fotos</h2>
         <div class="gallery">
-            <img src="escola1.jpg" alt="Foto do Colégio São Cristóvão 1">
-            <img src="escola2.jpg" alt="Foto do Colégio São Cristóvão 2">
-            <img src="escola3.jpg" alt="Foto do Colégio São Cristóvão 3">
-            <img src="escola4.jpg" alt="Foto do Colégio São Cristóvão 4">
+            <img src="escola1.jpg" alt="Foto do Colégio São Cristóvão 1" class="gallery-item" onclick="abrirImagem(this)">
+            <img src="escola2.jpg" alt="Foto do Colégio São Cristóvão 2" class="gallery-item" onclick="abrirImagem(this)">
+            <img src="escola3.jpg" alt="Foto do Colégio São Cristóvão 3" class="gallery-item" onclick="abrirImagem(this)">
+            <img src="escola4.jpg" alt="Foto do Colégio São Cristóvão 4" class="gallery-item" onclick="abrirImagem(this)">
         </div>
     </section>
 </main>
